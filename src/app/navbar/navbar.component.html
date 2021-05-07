@@ -1,0 +1,24 @@
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <img src="assets/capgi_logo.png" alt="capgi_logo" width="18%" style="padding: 10px;">
+
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style="font-size: 17px;">
+    <li><a href="#" routerLink="home" class="nav-link px-2 link-secondary">Home</a></li>
+    <li><a href="#" routerLink="products" class="nav-link px-2 link-dark">Products</a></li>
+    <li><a href="#" routerLink="contact" class="nav-link px-2 link-dark">Contact</a></li>
+    <li><a href="#" routerLink="about" class="nav-link px-2 link-dark">About</a></li>
+  </ul>
+
+  <div *ngIf="router.url == '/home'" class="col-md-2 text-end">
+    <button routerLink="login" type="button" class="btn btn-outline-primary me-2">Login</button>
+    <button routerLink="signup" type="button" class="btn btn-primary">Sign-up</button>
+  </div>
+
+  <div *ngIf="router.url == '/login'" class="col-md-2 text-end">
+    <button routerLink="signup" type="button" class="btn btn-primary">Sign-up</button>
+  </div>
+
+  <div *ngIf="router.url == '/signup'" class="col-md-2 text-end">
+    <button routerLink="login" type="button" class="btn btn-outline-primary me-2">Login</button>
+  </div>
+
+</header>
